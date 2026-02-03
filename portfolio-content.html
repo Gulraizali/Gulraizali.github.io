@@ -1,104 +1,164 @@
 <div class="row">
     <div class="col-md-12">
-        <h2 id="portfolio_header" class="section__title">Recent Projects</h2>
+        <h2 id="portfolio_header" class="section__title">Featured Projects</h2>
     </div>
 </div>
 
 <div class="portfolio-cards">
-    
-    <div class="row project-card" data-toggle="modal" data-target="#modalSTCPay">
-        <div class="col-md-6 col-lg-5 project-card__img">
-            <img src="assets/img/img_project_1_mono.png" alt="STC Pay">
-        </div>
-        <div class="col-md-6 col-lg-7 project-card__info">
-            <h3 class="project-card__title">STC Pay (Fintech)</h3>
-            <p class="project-card__description">
-                Engineered a reusable payment SDK for STC Pay (Kuwait & Bahrain). Secured Mastercard approval and implemented NDK-level security.
-            </p>
-            <p class="project-card__stack">Used stack:</p>
-            <ul class="tags">
-                <li>Kotlin</li>
-                <li>NDK</li>
-                <li>Clean Architecture</li>
-                <li>MVI</li>
-            </ul>
-            <span class="project-card__link">View Details</span>
-        </div>
-    </div>
 
     <div class="row project-card" data-toggle="modal" data-target="#modalKuraimi">
         <div class="col-md-6 col-lg-5 project-card__img">
-            <img src="assets/img/img_project_2_mono.png" alt="Kuraimi Jawwal">
+            <img src="assets/img/project_kuraimi.png" alt="Kuraimi Jawwal">
         </div>
         <div class="col-md-6 col-lg-7 project-card__info">
-            <h3 class="project-card__title">Kuraimi Jawwal (Banking)</h3>
-            <p class="project-card__description">
-                Developed secure financial modules and Islamic banking features, increasing transaction volume by 30% for over 20k users.
-            </p>
-            <p class="project-card__stack">Used stack:</p>
+            <h3 class="project-card__title">Kuraimi Jawwal</h3>
+            <p class="project-card__description">Secure Android banking application built for regulated financial environments. Serving 1M+ active users.</p>
             <ul class="tags">
+                <li>Kotlin</li>
                 <li>Jetpack Compose</li>
-                <li>Azure DevOps</li>
                 <li>Retrofit</li>
                 <li>Room</li>
             </ul>
-            <span class="project-card__link">View Details</span>
+            <span class="project-card__link">View Case Study</span>
         </div>
     </div>
-</div>
 
-<div class="modal fade portfolio-modal" id="modalSTCPay" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
-                <p class="portfolio-modal__title">STC Pay - Payment SDK & Mobile Wallet</p>
-                <img class="portfolio-modal__img" src="assets/img/img_project_1_mono.png" alt="STC Pay Full">
-                <p class="portfolio-modal__description">
-                    As a Senior Android Developer, I led the engineering of a modular Android architecture for STC Pay. 
-                    Key achievements include reducing transaction costs by 20% and implementing advanced security measures using NDK and code obfuscation to reduce vulnerabilities by 60%.
-                </p>
-                <div class="portfolio-modal__stack">
-                    <p class="portfolio-modal__stack-title">Using stack:</p>
-                    <ul class="tags">
-                        <li>Kotlin</li>
-                        <li>Dagger Hilt</li>
-                        <li>RxJava</li>
-                        <li>SSL Pinning</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="row project-card" data-toggle="modal" data-target="#modalSTCPayBH">
+        <div class="col-md-6 col-lg-5 project-card__img">
+            <img src="assets/img/project_stcpay.png" alt="STC Pay BH">
+        </div>
+        <div class="col-md-6 col-lg-7 project-card__info">
+            <h3 class="project-card__title">STC Pay BH – Mobile Wallet</h3>
+            <p class="project-card__description">High-scale wallet used nationwide in Bahrain. Features card management, remittances, and secure banking-grade transactions.</p>
+            <ul class="tags">
+                <li>Coroutines</li>
+                <li>Hilt</li>
+                <li>Firebase</li>
+                <li>Jetpack Compose</li>
+            </ul>
+            <span class="project-card__link">View Case Study</span>
         </div>
     </div>
+
+    <div class="row project-card" data-toggle="modal" data-target="#modalMFloos">
+        <div class="col-md-6 col-lg-5 project-card__img">
+            <img src="assets/img/project_mfloos.png" alt="mFloos">
+        </div>
+        <div class="col-md-6 col-lg-7 project-card__info">
+            <h3 class="project-card__title">mFloos – E-Wallet</h3>
+            <p class="project-card__description">Yemen’s first eWallet enabling financial inclusion with offline/SMS-based transactions and international remittances.</p>
+            <ul class="tags">
+                <li>SSL Pinning</li>
+                <li>Biometric Auth</li>
+                <li>MVVM</li>
+                <li>2FA</li>
+            </ul>
+            <span class="project-card__link">View Case Study</span>
+        </div>
+    </div>
+
+    <div class="row project-card" data-toggle="modal" data-target="#modalKiB">
+        <div class="col-md-6 col-lg-5 project-card__img">
+            <img src="assets/img/project_kib.png" alt="KiB">
+        </div>
+        <div class="col-md-6 col-lg-7 project-card__info">
+            <h3 class="project-card__title">KiB – Islamic Banking</h3>
+            <p class="project-card__description">Multi-currency Sharia-compliant banking platform featuring dynamic dashboards and AES/RSA encryption.</p>
+            <ul class="tags">
+                <li>MVI</li>
+                <li>AES/RSA</li>
+                <li>Hilt</li>
+                <li>Jetpack Compose</li>
+            </ul>
+            <span class="project-card__link">View Case Study</span>
+        </div>
+    </div>
+
+    <div class="row project-card" data-toggle="modal" data-target="#modalMigraine">
+        <div class="col-md-6 col-lg-5 project-card__img">
+            <img src="assets/img/project_migraine.png" alt="Migraine Relief">
+        </div>
+        <div class="col-md-6 col-lg-7 project-card__info">
+            <h3 class="project-card__title">Migraine Relief (Health Tech)</h3>
+            <p class="project-card__description">Research app built with MIT & Harvard experts. Predicts migraine risk using environmental and wearable data.</p>
+            <ul class="tags">
+                <li>WorkManager</li>
+                <li>Firestore</li>
+                <li>MVVM</li>
+                <li>Research</li>
+            </ul>
+            <span class="project-card__link">View Case Study</span>
+        </div>
+    </div>
+
 </div>
 
 <div class="modal fade portfolio-modal" id="modalKuraimi" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+            <div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
             <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
-                <p class="portfolio-modal__title">Kuraimi Jawwal Financial Modules</p>
-                <img class="portfolio-modal__img" src="assets/img/img_project_2_mono.png" alt="Kuraimi Full">
+                <p class="portfolio-modal__title">Kuraimi Jawwal - Banking Application</p>
+                <img class="portfolio-modal__img" src="assets/img/project_kuraimi.png" alt="">
                 <p class="portfolio-modal__description">
-                    Focused on high-performance financial modules. I implemented CI/CD pipelines with Azure DevOps which reduced release times by 40%. The app supports complex Islamic banking features and multilingual support for a diverse user base.
+                    Developed a robust banking solution for regulated financial environments. The application achieved over 1 million downloads, providing secure transaction modules and a modern UI using Jetpack Compose.
                 </p>
-                <div class="portfolio-modal__stack">
-                    <p class="portfolio-modal__stack-title">Using stack:</p>
-                    <ul class="tags">
-                        <li>Jetpack Compose</li>
-                        <li>MVVM</li>
-                        <li>Coroutines</li>
-                        <li>Firebase</li>
-                    </ul>
-                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade portfolio-modal" id="modalSTCPayBH" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+            <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
+                <p class="portfolio-modal__title">STC Pay BH – Mobile Wallet</p>
+                <p class="portfolio-modal__description">
+                    A comprehensive fintech app for the Bahrain market. Managed multi-lingual support and complex remittance logic. Architected with Hilt for dependency injection and Coroutines for high-performance background tasks.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade portfolio-modal" id="modalMFloos" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+            <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
+                <p class="portfolio-modal__title">mFloos – Customers</p>
+                <p class="portfolio-modal__description">
+                    Focused on financial inclusion in Yemen. This app supports mission-critical offline/SMS transactions, ensuring users can transfer money and pay bills even with limited internet connectivity. Implemented high-level security with SSL Pinning and Biometric Auth.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade portfolio-modal" id="modalKiB" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+            <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
+                <p class="portfolio-modal__title">Kuraimi Islamic Bank (KiB)</p>
+                <p class="portfolio-modal__description">
+                    A Sharia-compliant banking platform using MVI architecture for predictable state management. It handles multi-currency transactions and utilizes AES/RSA encryption to protect sensitive user financial data.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade portfolio-modal" id="modalMigraine" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+            <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
+                <p class="portfolio-modal__title">Migraine Relief – Health & Research</p>
+                <p class="portfolio-modal__description">
+                    Collaborated with researchers from MIT and Harvard to build this health management tool. The app integrates physiological and environmental data to predict migraine risks, utilizing WorkManager for reliable background data processing.
+                </p>
             </div>
         </div>
     </div>
