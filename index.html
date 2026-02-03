@@ -261,40 +261,77 @@
 <!--Resume-->
 
 <!--Portfolio-->
-<section id="portfolio" class="container section">
-  <div id="portfolio-loader">
-    <p>Loading projects...</p>
-  </div>
+<section id="portfolio" class="section section__portfolio">
+    <div class="container">
+        <div id="portfolio-loader">
+            <div class="text-center">
+                <p>Loading Projects...</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script>
-  /**
-   * Fetches portfolio content and initializes filtering 
-   * logic for the dynamically injected elements.
-   */
-  fetch('portfolio-content.html')
-  .then(response => response.text())
-  .then(data => {
-    const loader = document.getElementById('portfolio-loader');
-    loader.innerHTML = data;
+    // Load the 26 projects from the external file
+    fetch('portfolio-content.html')
+        .then(response => response.text())
+        .then(data => {
+            const loader = document.getElementById('portfolio-loader');
+            loader.innerHTML = data;
 
-      // Initialize filter behavior for the injected HTML
-    const links = loader.querySelectorAll('.portfolio-menu a');
-    const cards = loader.querySelectorAll('.project-card');
+            const projectCards = loader.querySelectorAll('.project-card');
+            const filterLinks = loader.querySelectorAll('.portfolio-menu a');
 
-    links.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = this.getAttribute('data-portfolio-target-tag');
+            // 1. CLICK TO OPEN MODAL FUNCTIONALITY
+            projectCards.forEach(card => {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', function() {
+                    const title = this.querySelector('.project-card__title').innerText;
+                    const desc = this.querySelector('.project-card__description').innerText;
+                    const imgSrc = this.querySelector('img').src;
+                    const tags = this.querySelectorAll('.tags li');
 
-        cards.forEach(card => {
-          const tag = card.getAttribute('data-portfolio-tag');
-          card.style.display = (target === 'all' || target === tag) ? 'flex' : 'none';
-        });
-      });
-    });
-  })
-  .catch(err => console.error('Error loading portfolio:', err));
+                    // Set Modal Content
+                    document.getElementById('modal-title').innerText = title;
+                    document.getElementById('modal-desc').innerText = desc;
+                    document.getElementById('modal-img').src = imgSrc;
+                    
+                    const tagsList = document.getElementById('modal-tags-list');
+                    tagsList.innerHTML = ''; 
+                    tags.forEach(t => {
+                        const li = document.createElement('li');
+                        li.innerText = t.innerText;
+                        tagsList.appendChild(li);
+                    });
+
+                    // Trigger Bootstrap Modal
+                    $('#projectModal').modal('show');
+                });
+            });
+
+            // 2. FILTERING FUNCTIONALITY
+            filterLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Update Active Class
+                    filterLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const target = this.getAttribute('data-portfolio-target-tag');
+                    
+                    projectCards.forEach(card => {
+                        const projectTags = card.getAttribute('data-portfolio-tag');
+                        if (target === 'all' || projectTags.includes(target)) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        })
+        .catch(err => console.error("Error loading portfolio:", err));
 </script>
 <!--Portfolio-->
 
